@@ -91,7 +91,7 @@ DATABASES={
 }
 
 # DATABASES={
-#     "default":dj_database_url.parse("postgres://margamvinaypostgresql_user:h4tfoxxfujz8ddh6kjC2bhT1yruK8vPa@dpg-clsu9vdcm5oc739cci7g-a.oregon-postgres.render.com/margamvinaypostgresql")
+#     "default":dj_database_url.parse("database_url")
 # }
 
 # Password validation
