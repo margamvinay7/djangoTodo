@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +27,7 @@ SECRET_KEY = "django-insecure-6-t&(tu1s%e+4qux=jrtp$mrv%7nn9&a^2363mg%wfxnir*5h+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://margamvinay.onrender.com']
+ALLOWED_HOSTS = ['https://margamvinay.onrender.com','127.0.0.1']
 
 
 # Application definition
@@ -78,13 +79,20 @@ WSGI_APPLICATION = "todo.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+DATABASES={
+    "default":dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+# DATABASES={
+#     "default":dj_database_url.parse("postgres://margamvinaypostgresql_user:h4tfoxxfujz8ddh6kjC2bhT1yruK8vPa@dpg-clsu9vdcm5oc739cci7g-a.oregon-postgres.render.com/margamvinaypostgresql")
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
