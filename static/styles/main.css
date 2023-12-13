@@ -1,0 +1,33 @@
+body{
+    width: 100dvw;
+    height:100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.hello{
+    background-color:blue;
+}
+
+.todo{
+    width: 400px;
+    height: 25px;
+    border-radius: 2px;
+    outline: none;
+    border-width: 1px;
+    
+
+}
+
+.todo:hover{
+    border-radius:2px;
+    border-color: aqua;
+}
+
+.list {
+    list-style: none;
+    
+}
